@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env npx tsx
 import * as fs from "fs";
 import * as path from "path";
 
@@ -33,7 +33,7 @@ function parseArgs(argv: string[]): Args {
   }
 
   if (positional.length !== 1) {
-    throw new Error("Usage: duperemover <subdirectory> [--delete]");
+    throw new Error("Usage: duperemover.ts <subdirectory> [--delete]");
   }
 
   return { targetDir: positional[0], shouldDelete };
